@@ -143,7 +143,6 @@ const Card = styled.div`
     height: 38px;
     width: 38px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
   }
 
   div:hover {
@@ -196,102 +195,102 @@ const Card = styled.div`
   }
 
   div:nth-child(10) {
-    top: 214px;
-    left: 824px;
+    top: 222px;
+    left: 1184px;
   }
 
   div:nth-child(11) {
-    top: 214px;
-    left: 824px;
+    top: 284px;
+    left: 1238px;
   }
 
   div:nth-child(12) {
-    top: 214px;
-    left: 824px;
+    top: 332px;
+    left: 1094px;
   }
 
   div:nth-child(13) {
-    top: 214px;
-    left: 824px;
+    top: 332px;
+    left: 974px;
   }
 
   div:nth-child(14) {
-    top: 214px;
-    left: 824px;
+    top: 320px;
+    left: 780px;
   }
 
   div:nth-child(15) {
-    top: 214px;
-    left: 824px;
+    top: 394px;
+    left: 876px;
   }
 
   div:nth-child(16) {
-    top: 214px;
-    left: 824px;
+    top: 468px;
+    left: 976px;
   }
 
   div:nth-child(17) {
-    top: 214px;
-    left: 824px;
+    top: 430px;
+    left: 1046px;
   }
 
   div:nth-child(18) {
-    top: 214px;
-    left: 824px;
+    top: 506px;
+    left: 1096px;
   }
 
   div:nth-child(19) {
-    top: 214px;
-    left: 824px;
+    top: 468px;
+    left: 1140px;
   }
 
   div:nth-child(20) {
-    top: 214px;
-    left: 824px;
+    top: 438px;
+    left: 1198px;
   }
 
   div:nth-child(21) {
-    top: 214px;
-    left: 824px;
+    top: 552px;
+    left: 1138px;
   }
 
   div:nth-child(22) {
-    top: 214px;
-    left: 824px;
+    top: 670px;
+    left: 1048px;
   }
 
   div:nth-child(23) {
-    top: 214px;
-    left: 824px;
+    top: 682px;
+    left: 888px;
   }
 
   div:nth-child(24) {
-    top: 214px;
-    left: 824px;
+    top: 674px;
+    left: 750px;
   }
 
   div:nth-child(25) {
-    top: 214px;
-    left: 824px;
+    top: 610px;
+    left: 612px;
   }
 
   div:nth-child(26) {
-    top: 214px;
-    left: 824px;
+    top: 508px;
+    left: 614px;
   }
 
   div:nth-child(27) {
-    top: 214px;
-    left: 824px;
+    top: 780px;
+    left: 684px;
   }
 
   div:nth-child(28) {
-    top: 214px;
-    left: 824px;
+    top: 780px;
+    left: 610px;
   }
 
   div:nth-child(29) {
-    top: 214px;
-    left: 824px;
+    top: 770px;
+    left: 562px;
   }
 `
