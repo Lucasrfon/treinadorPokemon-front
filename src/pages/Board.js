@@ -2,9 +2,24 @@ import styled from "styled-components";
 import map from "../images/map.png";
 
 export default function Board() {
+  const playersPosition = [
+    { color: "blue", position: 0 },
+    { color: "red", position: 0 },
+    { color: "green", position: 0 },
+    { color: "yellow", position: 0 },
+    { color: "black", position: 0 },
+    { color: "white", position: 0 },
+  ];
 
   const cardSquares = Array.from({ length: 29 }, (element, index) => (
-    <div key={`event${index}`} onClick={(event) => getEventCard(event.target.id)}></div>
+    <div key={index} onClick={(event) => getEventCard(event.target.id)}></div>
+  ));
+
+  const playerSquares = Array.from({ length: 37 }, (element, index) => (
+    <div
+      key={`event${index}`}
+      onClick={(event) => getEventCard(event.target.id)}
+    ></div>
   ));
 
   const pokemons = Array.from({ length: 37 }, (element, index) => (
@@ -16,16 +31,14 @@ export default function Board() {
   ));
 
   function getEventCard(id) {
-    if(id === "cerulean" || id === "vermilion") {
-      alert("Desafio?")
-    }
-    else if (id === "") {
-      alert("Pegou carta")
-    }
-    else {
-      alert("pegou duas cartas")
+    if (id === "cerulean" || id === "vermilion") {
+      alert("Desafio?");
+    } else if (id === "") {
+      alert("Pegou carta");
+    } else {
+      alert("pegou duas cartas");
       if (id === "cinnabar") {
-        alert("tem 20 pontos?")
+        alert("tem 20 pontos?");
       }
     }
   }
@@ -41,17 +54,50 @@ export default function Board() {
         <Card>{cardSquares}</Card>
         <City>
           <div id="pallet"></div>
-          <div id="viridian" onClick={(event) => getEventCard(event.target.id)}></div>
-          <div id="pewter" onClick={(event) => getEventCard(event.target.id)}></div>
-          <div id="cerulean" onClick={(event) => getEventCard(event.target.id)}></div>
-          <div id="lavender" onClick={(event) => getEventCard(event.target.id)}></div>
-          <div id="saffron" onClick={(event) => getEventCard(event.target.id)}></div>
-          <div id="celadon" onClick={(event) => getEventCard(event.target.id)}></div>
-          <div id="vermilion" onClick={(event) => getEventCard(event.target.id)}></div>
-          <div id="fuchsia" onClick={(event) => getEventCard(event.target.id)}></div>
-          <div id="cinnabar" onClick={(event) => getEventCard(event.target.id)}></div>
+          <div
+            id="viridian"
+            onClick={(event) => getEventCard(event.target.id)}
+          ></div>
+          <div
+            id="pewter"
+            onClick={(event) => getEventCard(event.target.id)}
+          ></div>
+          <div
+            id="cerulean"
+            onClick={(event) => getEventCard(event.target.id)}
+          ></div>
+          <div
+            id="lavender"
+            onClick={(event) => getEventCard(event.target.id)}
+          ></div>
+          <div
+            id="saffron"
+            onClick={(event) => getEventCard(event.target.id)}
+          ></div>
+          <div
+            id="celadon"
+            onClick={(event) => getEventCard(event.target.id)}
+          ></div>
+          <div
+            id="vermilion"
+            onClick={(event) => getEventCard(event.target.id)}
+          ></div>
+          <div
+            id="fuchsia"
+            onClick={(event) => getEventCard(event.target.id)}
+          ></div>
+          <div
+            id="cinnabar"
+            onClick={(event) => getEventCard(event.target.id)}
+          ></div>
         </City>
       </Position>
+      <Player></Player>
+      <Player></Player>
+      <Player></Player>
+      <Player></Player>
+      <Player></Player>
+      <Player></Player>
       <img src={map} alt="tabuleiro" />
     </Container>
   );
@@ -144,7 +190,7 @@ const Position = styled.div`
   height: 950px;
   width: 1688.88px;
 
-  >div {
+  > div {
     position: absolute;
     height: 58px;
     width: 58px;
@@ -155,187 +201,187 @@ const Position = styled.div`
     cursor: pointer;
   }
 
-  >div:nth-child(1) {
+  > div:nth-child(1) {
     top: 574px;
     left: 406px;
   }
 
-  >div:nth-child(2) {
+  > div:nth-child(2) {
     top: 512px;
     left: 358px;
   }
 
-  >div:nth-child(3) {
+  > div:nth-child(3) {
     top: 386px;
     left: 376px;
   }
 
-  >div:nth-child(4) {
+  > div:nth-child(4) {
     top: 312px;
     left: 492px;
   }
 
-  >div:nth-child(5) {
+  > div:nth-child(5) {
     top: 312px;
     left: 340px;
   }
 
-  >div:nth-child(6) {
+  > div:nth-child(6) {
     top: 242px;
     left: 334px;
   }
 
-  >div:nth-child(7) {
+  > div:nth-child(7) {
     top: 192px;
     left: 414px;
   }
 
-  >div:nth-child(8) {
+  > div:nth-child(8) {
     top: 120px;
     left: 456px;
   }
 
-  >div:nth-child(9) {
+  > div:nth-child(9) {
     top: 112px;
     left: 582px;
   }
 
-  >div:nth-child(10) {
+  > div:nth-child(10) {
     top: 246px;
     left: 588px;
   }
 
-  >div:nth-child(11) {
+  > div:nth-child(11) {
     top: 246px;
     left: 684px;
   }
 
-  >div:nth-child(12) {
+  > div:nth-child(12) {
     top: 122px;
     left: 738px;
   }
 
-  >div:nth-child(13) {
+  > div:nth-child(13) {
     top: 128px;
     left: 808px;
   }
 
-  >div:nth-child(14) {
+  > div:nth-child(14) {
     top: 262px;
     left: 814px;
   }
 
-  >div:nth-child(15) {
+  > div:nth-child(15) {
     top: 122px;
     left: 952px;
   }
 
-  >div:nth-child(16) {
+  > div:nth-child(16) {
     top: 134px;
     left: 1074px;
   }
 
-  >div:nth-child(17) {
+  > div:nth-child(17) {
     top: 244px;
     left: 1124px;
   }
 
-  >div:nth-child(18) {
+  > div:nth-child(18) {
     top: 212px;
     left: 1266px;
   }
 
-  >div:nth-child(19) {
+  > div:nth-child(19) {
     top: 276px;
     left: 1044px;
   }
 
-  >div:nth-child(20) {
+  > div:nth-child(20) {
     top: 366px;
     left: 808px;
   }
 
-  >div:nth-child(21) {
+  > div:nth-child(21) {
     top: 400px;
     left: 954px;
   }
 
-  >div:nth-child(22) {
+  > div:nth-child(22) {
     top: 382px;
     left: 1100px;
   }
 
-  >div:nth-child(23) {
+  > div:nth-child(23) {
     top: 540px;
     left: 1050px;
   }
 
-  >div:nth-child(24) {
+  > div:nth-child(24) {
     top: 378px;
     left: 1228px;
   }
 
-  >div:nth-child(25) {
+  > div:nth-child(25) {
     top: 482px;
     left: 1240px;
   }
 
-  >div:nth-child(26) {
+  > div:nth-child(26) {
     top: 560px;
     left: 1214px;
   }
 
-  >div:nth-child(27) {
+  > div:nth-child(27) {
     top: 602px;
     left: 1136px;
   }
 
-  >div:nth-child(28) {
+  > div:nth-child(28) {
     top: 676px;
     left: 1100px;
   }
 
-  >div:nth-child(29) {
+  > div:nth-child(29) {
     top: 614px;
     left: 958px;
   }
 
-  >div:nth-child(30) {
+  > div:nth-child(30) {
     top: 722px;
     left: 952px;
   }
 
-  >div:nth-child(31) {
+  > div:nth-child(31) {
     top: 766px;
     left: 866px;
   }
 
-  >div:nth-child(32) {
+  > div:nth-child(32) {
     top: 730px;
     left: 748px;
   }
 
-  >div:nth-child(33) {
+  > div:nth-child(33) {
     top: 688px;
     left: 686px;
   }
 
-  >div:nth-child(34) {
+  > div:nth-child(34) {
     top: 556px;
     left: 558px;
   }
 
-  >div:nth-child(35) {
+  > div:nth-child(35) {
     top: 458px;
     left: 558px;
   }
 
-  >div:nth-child(36) {
+  > div:nth-child(36) {
     top: 388px;
     left: 560px;
   }
 
-  >div:nth-child(37) {
+  > div:nth-child(37) {
     top: 314px;
     left: 570px;
   }
@@ -503,4 +549,12 @@ const Card = styled.div`
     top: 770px;
     left: 562px;
   }
+`;
+
+const Player = styled.div`
+  position: static;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  background-color: green;
 `;
