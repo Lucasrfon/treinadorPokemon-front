@@ -1,11 +1,11 @@
 import styled from "styled-components"
-import { getEventCard } from "../logic/fuctions"
+import { turnPoke } from "../logic/fuctions"
 
-export default function CitySquares({ id }) {
+export default function CitySquares({ id, position }) {
     if (id === "pallet") {
        return <Squares id={id}></Squares>
     } else {
-       return <Squares id={id} onClick={(event) => getEventCard(event.target.id)}></Squares>
+       return <Squares id={id} onClick={(event) => turnPoke(position)}></Squares>
     }
 
 }

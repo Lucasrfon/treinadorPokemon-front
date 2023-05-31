@@ -12,7 +12,7 @@ function getEventCard(id) {
 }
 
 function turnPoke(id) {
-    alert(`Pegou${id}`);
+    console.log(id);
 }
 
 export { getEventCard, turnPoke }

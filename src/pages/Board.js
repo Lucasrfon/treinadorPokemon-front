@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import map from "../images/map.png";
 import CardSquares from "../squares/CardSquares.js";
-import PokeSquares from "../squares/PokeSquares.js";
+import CaptureSquares from "../squares/CaptureSquares.js";
 import CitySquares from "../squares/CitySquares.js";
 
 export default function Board() {
@@ -10,77 +10,77 @@ export default function Board() {
     <Container>
       <Position>
         <CitySquares position={0} id={"pallet"}/>
-        <PokeSquares position={1}/>
+        <CaptureSquares position={1}/>
         <CardSquares position={2}/>
-        <PokeSquares position={3}/>
+        <CaptureSquares position={3}/>
         <CitySquares position={4} id={"viridian"}/>
         <CardSquares position={5}/>
-        <PokeSquares position={6}/>
-        <PokeSquares position={7}/>
+        <CaptureSquares position={6}/>
+        <CaptureSquares position={7}/>
         <CardSquares position={8}/>
-        <PokeSquares position={9}/>
-        <PokeSquares position={10}/>
-        <PokeSquares position={11}/>
+        <CaptureSquares position={9}/>
+        <CaptureSquares position={10}/>
+        <CaptureSquares position={11}/>
         <CitySquares position={12} id={"pewter"}/>
         <CardSquares position={13}/>
-        <PokeSquares position={14}/>
+        <CaptureSquares position={14}/>
         <CardSquares position={15}/>
-        <PokeSquares position={16}/>
-        <PokeSquares position={17}/>
-        <PokeSquares position={18}/>
+        <CaptureSquares position={16}/>
+        <CaptureSquares position={17}/>
+        <CaptureSquares position={18}/>
         <CardSquares position={19}/>
-        <PokeSquares position={20}/>
-        <PokeSquares position={21}/>
+        <CaptureSquares position={20}/>
+        <CaptureSquares position={21}/>
         <CardSquares position={22}/>
         <CitySquares position={23} id={"cerulean"}/>
-        <PokeSquares position={24}/>
+        <CaptureSquares position={24}/>
         <CardSquares position={25}/>
-        <PokeSquares position={26}/>
-        <PokeSquares position={27}/>
+        <CaptureSquares position={26}/>
+        <CaptureSquares position={27}/>
         <CardSquares position={28}/>
-        <PokeSquares position={29}/>
+        <CaptureSquares position={29}/>
         <CardSquares position={30}/>
         <CitySquares position={31} id={"lavender"}/>
         <CardSquares position={32}/>
-        <PokeSquares position={33}/>
+        <CaptureSquares position={33}/>
         <CardSquares position={34}/>
         <CitySquares position={35} id={"saffron"}/>
-        <PokeSquares position={36}/>
+        <CaptureSquares position={36}/>
         <CardSquares position={37}/>
-        <PokeSquares position={38}/>
+        <CaptureSquares position={38}/>
         <CardSquares position={39}/>
         <CardSquares position={40}/>
-        <PokeSquares position={41}/>
+        <CaptureSquares position={41}/>
         <CitySquares position={42} id={"vermilion"}/>
         <CardSquares position={43}/>
         <CardSquares position={44}/>
-        <PokeSquares position={45}/>
+        <CaptureSquares position={45}/>
         <CardSquares position={46}/>
         <CardSquares position={47}/>
-        <PokeSquares position={48}/>
-        <PokeSquares position={49}/>
+        <CaptureSquares position={48}/>
+        <CaptureSquares position={49}/>
         <CardSquares position={50}/>
-        <PokeSquares position={51}/>
-        <PokeSquares position={52}/>
+        <CaptureSquares position={51}/>
+        <CaptureSquares position={52}/>
         <CardSquares position={53}/>
-        <PokeSquares position={54}/>
-        <PokeSquares position={55}/>
+        <CaptureSquares position={54}/>
+        <CaptureSquares position={55}/>
         <CardSquares position={56}/>
-        <PokeSquares position={57}/>
-        <PokeSquares position={58}/>
+        <CaptureSquares position={57}/>
+        <CaptureSquares position={58}/>
         <CardSquares position={59}/>
         <CitySquares position={60} id={"fuchsia"}/>
         <CardSquares position={61}/>
-        <PokeSquares position={62}/>
+        <CaptureSquares position={62}/>
         <CardSquares position={63}/>
-        <PokeSquares position={64}/>
+        <CaptureSquares position={64}/>
         <CardSquares position={65}/>
-        <PokeSquares position={66}/>
-        <PokeSquares position={67}/>
-        <PokeSquares position={68}/>
+        <CaptureSquares position={66}/>
+        <CaptureSquares position={67}/>
+        <CaptureSquares position={68}/>
         <CitySquares position={69} id={"celadon"}/>
-        <PokeSquares position={70}/>
-        <PokeSquares position={71}/>
+        <CaptureSquares position={70}/>
+        <CaptureSquares position={71}/>
         <CardSquares position={72}/>
         <CardSquares position={73}/>
         <CardSquares position={74}/>
@@ -119,18 +119,18 @@ const Position = styled.div`
   }
 
   > div:nth-child(2) {
-    top: 574px;
-    left: 406px;
+    top: 584px;
+    left: 462px;
   }
 
   > div:nth-child(3) {
-    top: 574px;
-    left: 406px;
+    top: 534px;
+    left: 456px;
   }
 
   > div:nth-child(4) {
     top: 512px;
-    left: 358px;
+    left: 412px;
   }
 
   > div:nth-child(5) {
@@ -139,38 +139,38 @@ const Position = styled.div`
   }
 
   > div:nth-child(6) {
-    top: 312px;
-    left: 492px;
+    top: 418px;
+    left: 464px;
   }
 
   > div:nth-child(7) {
-    top: 312px;
-    left: 340px;
+    top: 380px;
+    left: 428px;
   }
 
   > div:nth-child(8) {
-    top: 120px;
-    left: 456px;
+    top: 356px;
+    left: 472px;
   }
 
   > div:nth-child(9) {
-    top: 112px;
-    left: 582px;
+    top: 322px;
+    left: 438px;
   }
 
   > div:nth-child(10) {
-    top: 246px;
-    left: 588px;
+    top: 310px;
+    left: 394px;
   }
 
   > div:nth-child(11) {
-    top: 246px;
-    left: 684px;
+    top: 262px;
+    left: 386px;
   }
 
   > div:nth-child(12) {
-    top: 122px;
-    left: 738px;
+    top: 246px;
+    left: 436px;
   }
 
   > div:nth-child(13) {
@@ -179,53 +179,53 @@ const Position = styled.div`
   }
 
   > div:nth-child(14) {
-    top: 262px;
-    left: 814px;
+    top: 186px;
+    left: 488px;
   }
 
   > div:nth-child(15) {
-    top: 122px;
-    left: 952px;
+    top: 142px;
+    left: 508px;
   }
 
   > div:nth-child(16) {
-    top: 134px;
-    left: 1074px;
+    top: 170px;
+    left: 546px;
   }
 
   > div:nth-child(17) {
-    top: 244px;
-    left: 1124px;
+    top: 168px;
+    left: 592px;
   }
 
   > div:nth-child(18) {
     top: 212px;
-    left: 1266px;
+    left: 612px;
   }
 
   > div:nth-child(19) {
-    top: 276px;
-    left: 1044px;
+    top: 210px;
+    left: 680px;
   }
 
   > div:nth-child(20) {
-    top: 366px;
-    left: 808px;
+    top: 166px;
+    left: 698px;
   }
 
   > div:nth-child(21) {
-    top: 400px;
-    left: 954px;
+    top: 176px;
+    left: 744px;
   }
 
   > div:nth-child(22) {
-    top: 382px;
-    left: 1100px;
+    top: 176px;
+    left: 794px;
   }
 
   > div:nth-child(23) {
-    top: 540px;
-    left: 1050px;
+    top: 214px;
+    left: 824px;
   }
 
   > div:nth-child(24) {
@@ -234,38 +234,38 @@ const Position = styled.div`
   }
 
   > div:nth-child(25) {
-    top: 482px;
-    left: 1240px;
+    top: 174px;
+    left: 976px;
   }
 
   > div:nth-child(26) {
-    top: 560px;
-    left: 1214px;
+    top: 188px;
+    left: 1044px;
   }
 
   > div:nth-child(27) {
-    top: 602px;
-    left: 1136px;
+    top: 188px;
+    left: 1092px;
   }
 
   > div:nth-child(28) {
-    top: 676px;
-    left: 1100px;
+    top: 208px;
+    left: 1136px;
   }
 
   > div:nth-child(29) {
-    top: 614px;
-    left: 958px;
+    top: 222px;
+    left: 1184px;
   }
 
   > div:nth-child(30) {
-    top: 722px;
-    left: 952px;
+    top: 234px;
+    left: 1230px;
   }
 
   > div:nth-child(31) {
-    top: 766px;
-    left: 866px;
+    top: 284px;
+    left: 1238px;
   }
 
   > div:nth-child(32) {
@@ -274,18 +274,18 @@ const Position = styled.div`
   }
 
   > div:nth-child(33) {
-    top: 688px;
-    left: 686px;
+    top: 332px;
+    left: 1094px;
   }
 
   > div:nth-child(34) {
-    top: 556px;
-    left: 558px;
+    top: 330px;
+    left: 1046px;
   }
 
   > div:nth-child(35) {
-    top: 458px;
-    left: 558px;
+    top: 332px;
+    left: 974px;
   }
 
   > div:nth-child(36) {
@@ -294,33 +294,33 @@ const Position = styled.div`
   }
 
   > div:nth-child(37) {
-    top: 314px;
-    left: 570px;
+    top: 266px;
+    left: 868px;
   }
 
   div:nth-child(38) {
-    top: 534px;
-    left: 456px;
+    top: 264px;
+    left: 916px;
   }
 
   > div:nth-child(39) {
-    top: 574px;
-    left: 406px;
+    top: 332px;
+    left: 830px;
   }
 
   > div:nth-child(40) {
-    top: 574px;
-    left: 406px;
+    top: 320px;
+    left: 780px;
   }
 
   > div:nth-child(41) {
-    top: 512px;
-    left: 358px;
+    top: 394px;
+    left: 876px;
   }
 
   > div:nth-child(42) {
-    top: 386px;
-    left: 376px;
+    top: 416px;
+    left: 918px;
   }
 
   > div:nth-child(43) {
@@ -329,88 +329,88 @@ const Position = styled.div`
   }
 
   > div:nth-child(44) {
-    top: 312px;
-    left: 340px;
+    top: 468px;
+    left: 976px;
   }
 
   > div:nth-child(45) {
-    top: 120px;
-    left: 456px;
+    top: 430px;
+    left: 1046px;
   }
 
   > div:nth-child(46) {
-    top: 112px;
-    left: 582px;
+    top: 432px;
+    left: 1096px;
   }
 
   > div:nth-child(47) {
-    top: 246px;
-    left: 588px;
+    top: 470px;
+    left: 1142px;
   }
 
   > div:nth-child(48) {
-    top: 246px;
-    left: 684px;
+    top: 506px;
+    left: 1096px;
   }
 
   > div:nth-child(49) {
-    top: 122px;
-    left: 738px;
+    top: 506px;
+    left: 1048px;
   }
 
   > div:nth-child(50) {
-    top: 128px;
-    left: 808px;
+    top: 392px;
+    left: 1192px;
   }
 
   > div:nth-child(51) {
-    top: 262px;
-    left: 814px;
+    top: 440px;
+    left: 1198px;
   }
 
   > div:nth-child(52) {
-    top: 122px;
-    left: 952px;
+    top: 488px;
+    left: 1204px;
   }
 
   > div:nth-child(53) {
-    top: 134px;
-    left: 1074px;
+    top: 540px;
+    left: 1188px;
   }
 
   > div:nth-child(54) {
-    top: 244px;
-    left: 1124px;
+    top: 552px;
+    left: 1138px;
   }
 
   > div:nth-child(55) {
-    top: 212px;
-    left: 1266px;
+    top: 596px;
+    left: 1102px;
   }
 
   > div:nth-child(56) {
-    top: 276px;
-    left: 1044px;
+    top: 644px;
+    left: 1090px;
   }
 
   > div:nth-child(57) {
-    top: 366px;
-    left: 808px;
+    top: 670px;
+    left: 1048px;
   }
 
   > div:nth-child(58) {
-    top: 400px;
-    left: 954px;
+    top: 670px;
+    left: 978px;
   }
 
   > div:nth-child(59) {
-    top: 382px;
-    left: 1100px;
+    top: 694px;
+    left: 936px;
   }
 
   > div:nth-child(60) {
-    top: 540px;
-    left: 1050px;
+    top: 682px;
+    left: 888px;
   }
 
   > div:nth-child(61) {
@@ -419,43 +419,43 @@ const Position = styled.div`
   }
 
   > div:nth-child(62) {
-    top: 482px;
-    left: 1240px;
+    top: 674px;
+    left: 750px;
   }
 
   > div:nth-child(63) {
-    top: 560px;
-    left: 1214px;
+    top: 654px;
+    left: 686px;
   }
 
   > div:nth-child(64) {
-    top: 602px;
-    left: 1136px;
+    top: 610px;
+    left: 612px;
   }
 
   > div:nth-child(65) {
-    top: 676px;
-    left: 1100px;
+    top: 558px;
+    left: 614px;
   }
 
   > div:nth-child(66) {
-    top: 614px;
-    left: 958px;
+    top: 508px;
+    left: 614px;
   }
 
   > div:nth-child(67) {
-    top: 722px;
-    left: 952px;
+    top: 458px;
+    left: 614px;
   }
 
   > div:nth-child(68) {
-    top: 766px;
-    left: 866px;
+    top: 408px;
+    left: 614px;
   }
 
   > div:nth-child(69) {
-    top: 730px;
-    left: 748px;
+    top: 358px;
+    left: 614px;
   }
 
   > div:nth-child(70) {
@@ -464,28 +464,28 @@ const Position = styled.div`
   }
 
   > div:nth-child(71) {
-    top: 556px;
-    left: 558px;
+    top: 752px;
+    left: 836px;
   }
 
   > div:nth-child(72) {
-    top: 458px;
-    left: 558px;
+    top: 776px;
+    left: 788px;
   }
 
   > div:nth-child(73) {
-    top: 388px;
-    left: 560px;
+    top: 780px;
+    left: 684px;
   }
 
   > div:nth-child(74) {
-    top: 314px;
-    left: 570px;
+    top: 780px;
+    left: 610px;
   }
 
   div:nth-child(75) {
-    top: 694px;
-    left: 568px;
+    top: 770px;
+    left: 562px;
   }
 
   div:nth-child(76) {

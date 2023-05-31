@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { getEventCard } from "../logic/fuctions"
+import { turnPoke } from "../logic/fuctions"
 
-export default function CardSquares() {
-  return (<Squares onClick={(event) => getEventCard(event.target.id)}></Squares>)
+export default function CardSquares({position}) {
+  return (<Squares onClick={(event) => turnPoke(position)}></Squares>)
 }
 
 const Squares = styled.div`
