@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { turnPoke } from "../logic/fuctions"
+import { turnPoke } from "../../logic/fuctions"
 
-export default function PokeSquares () {
-    return <Squares onClick={(event) => turnPoke(event.target.id)}></Squares>
+export default function PokeSquares() {
+  return <Squares onClick={(event) => turnPoke(event.target.id)}></Squares>
 }
 
 const Squares = styled.div`
@@ -11,7 +11,7 @@ const Squares = styled.div`
     width: 58px;
     border-radius: 50%;
 
-    &hover {
+    &:hover {
     cursor: pointer;
   }
 `

@@ -15,4 +15,4 @@ function turnPoke(id) {
     console.log(id);
 }
 
-export { getEventCard, turnPoke }
+export { getEventCard, turnPoke };
