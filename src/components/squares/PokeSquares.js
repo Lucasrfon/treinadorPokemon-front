@@ -1,17 +1,19 @@
-import styled from "styled-components"
-import { turnPoke } from "../../logic/fuctions"
+import styled from "styled-components";
 
 export default function PokeSquares() {
-  return <Squares onClick={(event) => turnPoke(event.target.id)}></Squares>
+	const pokemons = Array.from({ length: 41 }, (element, index) => (
+		<Squares id={index}></Squares>
+	));
+	return pokemons;
 }
 
 const Squares = styled.div`
-    position: absolute;
-    height: 58px;
-    width: 58px;
-    border-radius: 50%;
+	position: absolute;
+	height: 58px;
+	width: 58px;
+	border-radius: 50%;
 
-    &:hover {
-    cursor: pointer;
-  }
-`
+	&:hover {
+		cursor: pointer;
+	}
+`;

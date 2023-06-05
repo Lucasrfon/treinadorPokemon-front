@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { turnPoke } from "../../logic/fuctions";
 import Player from "../Players.js";
 
 export default function CitySquares({ id, position, players }) {
@@ -28,10 +27,7 @@ export default function CitySquares({ id, position, players }) {
       );
    } else {
       return (
-         <Squares
-            id={id}
-            onClick={(event) => turnPoke(position)}
-         >
+         <Squares id={id}>
             {players[0].position === position ? (
                <Player player={players[0].player}></Player>
             ) : null}

@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { turnPoke } from "../../logic/fuctions.js";
 import Player from "../Players.js";
 
 export default function TakeSquares({ position, players }) {
   return (
-    <Squares onClick={(event) => turnPoke(position)}>
+    <Squares>
       {players[0].position === position ? (
         <Player player={players[0].player}></Player>
       ) : null}
