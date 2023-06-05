@@ -1,14 +1,23 @@
 import styled from "styled-components";
 
 export default function Player({ player }) {
-
-    <Character layer={player} ></Character>
-
+	return <Character player={player}></Character>;
 }
 
 const Character = styled.div`
-	height: 34px;
-	width: 34px;
+	height: 24px;
+	width: 24px;
 	border-radius: 50%;
-	background-color: ${props => props.player === 1 ? 'blue' : props.player === 2 ? 'gray' : 'green'};
+	background-color: ${(props) =>
+		props.player === 1
+			? "blue"
+			: props.player === 2
+				? "red"
+				: props.player === 3
+					? "yellow"
+					: props.player === 4
+						? "black"
+						: props.player === 5
+							? "pink"
+							: "grey"};
 `;

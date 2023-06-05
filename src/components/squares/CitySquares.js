@@ -1,28 +1,49 @@
-import styled from "styled-components"
-import { turnPoke } from "../../logic/fuctions"
-import Player from "../Players"
+import styled from "styled-components";
+import { turnPoke } from "../../logic/fuctions";
+import Player from "../Players.js";
 
 export default function CitySquares({ id, position, players }) {
    if (id === "pallet") {
       return (
          <Squares id={id}>
-            <Player player={players[0].player} position={players[0].position} ></Player>
-            <Player player={players[1].player} position={players[1].position} ></Player>
-            <Player player={players[2].player} position={players[2].position} ></Player>
-            <Player player={players[3].player} position={players[3].position} ></Player>
-            <Player player={players[4].player} position={players[4].position} ></Player>
-            <Player player={players[5].player} position={players[5].position} ></Player>
-         </Squares>)
+            {players[0].position === 0 ? (
+               <Player player={players[0].player}></Player>
+            ) : null}
+            {players[1].position === 0 ? (
+               <Player player={players[1].player}></Player>
+            ) : null}
+            {players[2].position === 0 ? (
+               <Player player={players[2].player}></Player>
+            ) : null}
+            {players[3].position === 0 ? (
+               <Player player={players[3].player}></Player>
+            ) : null}
+            {players[4].position === 0 ? (
+               <Player player={players[4].player}></Player>
+            ) : null}
+            {players[5].position === 0 ? (
+               <Player player={players[5].player}></Player>
+            ) : null}
+         </Squares>
+      );
    } else {
-      return <Squares id={id} onClick={(event) => turnPoke(position)}></Squares>
+      return (
+         <Squares
+            id={id}
+            onClick={(event) => turnPoke(position)}
+         ></Squares>
+      );
    }
-
 }
 
 const Squares = styled.div`
-   position: absolute;
-   height: 55px;
-   width: 90px;
-   border-radius: 8px;
-   background-color: green;
-`
+	position: absolute;
+	height: 55px;
+	width: 90px;
+	border-radius: 8px;
+	background-color: green;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+`;
