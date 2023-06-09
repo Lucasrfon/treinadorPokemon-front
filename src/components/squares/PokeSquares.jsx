@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function PokeSquares() {
 	const pokemons = Array.from({ length: 41 }, (element, index) => (
-		<Squares id={index}></Squares>
+		<Squares id={index} key={index}></Squares>
 	));
 	return pokemons;
 }
@@ -12,8 +12,4 @@ const Squares = styled.div`
 	height: 58px;
 	width: 58px;
 	border-radius: 50%;
-
-	&:hover {
-		cursor: pointer;
-	}
 `;

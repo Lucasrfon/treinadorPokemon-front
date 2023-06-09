@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import map from "../images/map.png";
-import CardSquares from "../components/squares/CardSquares.js";
-import TakeSquares from "../components/squares/TakeSquares.js";
-import CitySquares from "../components/squares/CitySquares.js";
-import PokeSquares from "../components/squares/PokeSquares";
+import CardSquares from "../components/squares/CardSquares.jsx";
+import TakeSquares from "../components/squares/TakeSquares.jsx";
+import CitySquares from "../components/squares/CitySquares.jsx";
+import PokeSquares from "../components/squares/PokeSquares.jsx";
+import { useState } from "react";
 
 export default function Board() {
 	const players = [
@@ -14,6 +15,15 @@ export default function Board() {
 		{ player: 5, position: 0 },
 		{ player: 6, position: 0 },
 	];
+	const [dado1, setDado1] = useState(null);
+	const [dado2, setDado2] = useState(null);
+
+	function rollDie () {
+		const min = 1;
+		const max = 6;
+		setDado1(Math.floor(Math.random() * (max - min + 1)) + min);
+		setDado2(Math.floor(Math.random() * (max - min + 1)) + min);
+	}
 
 	return (
 		<Container>
@@ -338,6 +348,11 @@ export default function Board() {
 				src={map}
 				alt="tabuleiro"
 			/>
+			<Die>
+				<Dice>{dado1}</Dice>
+				<Dice>{dado2}</Dice>
+				<button onClick={rollDie}>PLAY</button>
+			</Die>
 		</Container>
 	);
 }
@@ -346,10 +361,16 @@ const Container = styled.div`
 	position: relative;
 	min-height: 100vh;
 	min-width: 100%;
-	background-color: black;
+	background-color: #7894bc;
 
 	img {
 		height: 950px;
+	}
+
+	button {
+		background-color: black;
+		border-radius: 10px;
+		color: white;
 	}
 `;
 
@@ -909,3 +930,40 @@ const Position = styled.div`
 		left: 1292px;
 	}
 `;
+
+const Die = styled.div`
+	position: absolute;
+	top: 200px;
+	left: 50px;
+	background-color: #ddd39e;
+	height: 250px;
+	width: 200px;
+	border-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	button {
+		height: 50px;
+		width:100px;
+		margin: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+`
+
+const Dice = styled.div`
+	margin: 10px;
+	height: 70px;
+	width: 70px;
+	background-color: white;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 3px 3px black;
+	font-weight: bold;
+	font-size: 20px
+`

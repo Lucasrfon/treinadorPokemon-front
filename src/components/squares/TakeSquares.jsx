@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Player from "../Players.js";
+import Player from "../Players.jsx";
 
 export default function TakeSquares({ position, players }) {
   return (
