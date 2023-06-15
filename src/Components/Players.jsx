@@ -14,10 +14,10 @@ const Character = styled.div`
 			: props.player === 2
 				? "red"
 				: props.player === 3
-					? "yellow"
+					? "purple"
 					: props.player === 4
 						? "black"
 						: props.player === 5
-							? "pink"
-							: "grey"};
+							? "darkgreen"
+							: "brown"};
 `;

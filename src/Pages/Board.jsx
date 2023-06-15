@@ -1,28 +1,30 @@
 import styled from "styled-components";
-import map from "../images/map.png";
-import CardSquares from "../components/squares/CardSquares.jsx";
-import TakeSquares from "../components/squares/TakeSquares.jsx";
-import CitySquares from "../components/squares/CitySquares.jsx";
-import PokeSquares from "../components/squares/PokeSquares.jsx";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import map from "../Images/map.png";
+import PlayersContext from "../Contexts/PlayersContext.jsx";
+import CardSquares from "../Components/Squares/CardSquares.jsx";
+import TakeSquares from "../Components/Squares/TakeSquares.jsx";
+import CitySquares from "../Components/Squares/CitySquares.jsx";
+import PokeSquares from "../Components/Squares/PokeSquares.jsx";
+import Hand from "../Components/Hand.jsx";
 
 export default function Board() {
-	const players = [
-		{ player: 1, position: 0 },
-		{ player: 2, position: 0 },
-		{ player: 3, position: 0 },
-		{ player: 4, position: 0 },
-		{ player: 5, position: 0 },
-		{ player: 6, position: 0 },
-	];
+	const { players, setPlayers } = useContext(PlayersContext);
 	const [dado1, setDado1] = useState(null);
 	const [dado2, setDado2] = useState(null);
+	const [turn, setTurn] = useState(0);
 
 	function rollDie () {
 		const min = 1;
 		const max = 6;
 		setDado1(Math.floor(Math.random() * (max - min + 1)) + min);
 		setDado2(Math.floor(Math.random() * (max - min + 1)) + min);
+		setPlayers(players[turn].position = dado1 + dado2);
+		if(turn === 5) {
+			setTurn(0)
+		} else {
+			setTurn(turn + 1)
+		}
 	}
 
 	return (
@@ -30,316 +32,240 @@ export default function Board() {
 			<Position>
 				<CitySquares
 					position={0}
-					players={players}
 					id={"pallet"}
 				/>
 				<TakeSquares
 					position={1}
-					players={players}
 				/>
 				<CardSquares
 					position={2}
-					players={players}
 				/>
 				<TakeSquares
 					position={3}
-					players={players}
 				/>
 				<CitySquares
 					position={4}
-					players={players}
 					id={"viridian"}
 				/>
 				<CardSquares
 					position={5}
-					players={players}
 				/>
 				<TakeSquares
 					position={6}
-					players={players}
 				/>
 				<TakeSquares
 					position={7}
-					players={players}
 				/>
 				<CardSquares
 					position={8}
-					players={players}
 				/>
 				<TakeSquares
 					position={9}
-					players={players}
 				/>
 				<TakeSquares
 					position={10}
-					players={players}
 				/>
 				<TakeSquares
 					position={11}
-					players={players}
 				/>
 				<CitySquares
 					position={12}
-					players={players}
 					id={"pewter"}
 				/>
 				<CardSquares
 					position={13}
-					players={players}
 				/>
 				<TakeSquares
 					position={14}
-					players={players}
 				/>
 				<CardSquares
 					position={15}
-					players={players}
 				/>
 				<TakeSquares
 					position={16}
-					players={players}
 				/>
 				<TakeSquares
 					position={17}
-					players={players}
 				/>
 				<TakeSquares
 					position={18}
-					players={players}
 				/>
 				<CardSquares
 					position={19}
-					players={players}
 				/>
 				<TakeSquares
 					position={20}
-					players={players}
 				/>
 				<TakeSquares
 					position={21}
-					players={players}
 				/>
 				<CardSquares
 					position={22}
-					players={players}
 				/>
 				<CitySquares
 					position={23}
-					players={players}
 					id={"cerulean"}
 				/>
 				<TakeSquares
 					position={24}
-					players={players}
 				/>
 				<CardSquares
 					position={25}
-					players={players}
 				/>
 				<TakeSquares
 					position={26}
-					players={players}
 				/>
 				<TakeSquares
 					position={27}
-					players={players}
 				/>
 				<CardSquares
 					position={28}
-					players={players}
 				/>
 				<TakeSquares
 					position={29}
-					players={players}
 				/>
 				<CardSquares
 					position={30}
-					players={players}
 				/>
 				<CitySquares
 					position={31}
-					players={players}
 					id={"lavender"}
 				/>
 				<CardSquares
 					position={32}
-					players={players}
 				/>
 				<TakeSquares
 					position={33}
-					players={players}
 				/>
 				<CardSquares
 					position={34}
-					players={players}
 				/>
 				<CitySquares
 					position={35}
-					players={players}
 					id={"saffron"}
 				/>
 				<TakeSquares
 					position={36}
-					players={players}
 				/>
 				<CardSquares
 					position={37}
-					players={players}
 				/>
 				<TakeSquares
 					position={38}
-					players={players}
 				/>
 				<CardSquares
 					position={39}
-					players={players}
 				/>
 				<CardSquares
 					position={40}
-					players={players}
 				/>
 				<TakeSquares
 					position={41}
-					players={players}
 				/>
 				<CitySquares
 					position={42}
-					players={players}
 					id={"vermilion"}
 				/>
 				<CardSquares
 					position={43}
-					players={players}
 				/>
 				<CardSquares
 					position={44}
-					players={players}
 				/>
 				<TakeSquares
 					position={45}
-					players={players}
 				/>
 				<CardSquares
 					position={46}
-					players={players}
 				/>
 				<CardSquares
 					position={47}
-					players={players}
 				/>
 				<TakeSquares
 					position={48}
-					players={players}
 				/>
 				<TakeSquares
 					position={49}
-					players={players}
 				/>
 				<CardSquares
 					position={50}
-					players={players}
 				/>
 				<TakeSquares
 					position={51}
-					players={players}
 				/>
 				<TakeSquares
 					position={52}
-					players={players}
 				/>
 				<CardSquares
 					position={53}
-					players={players}
 				/>
 				<TakeSquares
 					position={54}
-					players={players}
 				/>
 				<TakeSquares
 					position={55}
-					players={players}
 				/>
 				<CardSquares
 					position={56}
-					players={players}
 				/>
 				<TakeSquares
 					position={57}
-					players={players}
 				/>
 				<TakeSquares
 					position={58}
-					players={players}
 				/>
 				<CardSquares
 					position={59}
-					players={players}
 				/>
 				<CitySquares
 					position={60}
-					players={players}
 					id={"fuchsia"}
 				/>
 				<CardSquares
 					position={61}
-					players={players}
 				/>
 				<TakeSquares
 					position={62}
-					players={players}
 				/>
 				<CardSquares
 					position={63}
-					players={players}
 				/>
 				<TakeSquares
 					position={64}
-					players={players}
 				/>
 				<CardSquares
 					position={65}
-					players={players}
 				/>
 				<TakeSquares
 					position={66}
-					players={players}
 				/>
 				<TakeSquares
 					position={67}
-					players={players}
 				/>
 				<TakeSquares
 					position={68}
-					players={players}
 				/>
 				<CitySquares
 					position={69}
-					players={players}
 					id={"celadon"}
 				/>
 				<TakeSquares
 					position={70}
-					players={players}
 				/>
 				<TakeSquares
 					position={71}
-					players={players}
 				/>
 				<CardSquares
 					position={72}
-					players={players}
 				/>
 				<CardSquares
 					position={73}
-					players={players}
 				/>
 				<CardSquares
 					position={74}
-					players={players}
 				/>
 				<CitySquares
 					position={75}
-					players={players}
 					id={"cinnabar"}
 				/>
 				<PokeSquares />
@@ -353,6 +279,7 @@ export default function Board() {
 				<Dice>{dado2}</Dice>
 				<button onClick={rollDie}>PLAY</button>
 			</Die>
+			<Hand></Hand>
 		</Container>
 	);
 }
@@ -361,7 +288,7 @@ const Container = styled.div`
 	position: relative;
 	min-height: 100vh;
 	min-width: 100%;
-	background-color: #7894bc;
+	background-color: black;
 
 	img {
 		height: 950px;
@@ -380,10 +307,6 @@ const Position = styled.div`
 	left: 0;
 	height: 950px;
 	width: 1688.88px;
-
-	> div {
-		background-color: green;
-	}
 
 	> div:nth-child(1) {
 		top: 620px;

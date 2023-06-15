@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import PlayersContext from "../../Contexts/PlayersContext.jsx";
 import Player from "../Players.jsx";
 
-export default function CitySquares({ id, position, players }) {
+export default function CitySquares({ id, position }) {
+   const { players } = useContext(PlayersContext);
+
    if (id === "pallet") {
       return (
          <Squares id={id}>
@@ -56,7 +60,6 @@ const Squares = styled.div`
 	height: 55px;
 	width: 90px;
 	border-radius: 8px;
-	background-color: green;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;

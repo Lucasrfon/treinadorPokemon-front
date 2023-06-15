@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import PlayersContext from "../../Contexts/PlayersContext.jsx";
 import Player from "../Players.jsx";
 
-export default function TakeSquares({ position, players }) {
+export default function TakeSquares({ position }) {
+  const { players } = useContext(PlayersContext);
+
   return (
     <Squares>
       {players[0].position === position ? (
