@@ -10,5 +10,6 @@ const Container = styled.div`
     right: 50px;
 	height: 800px;
 	width: 400px;
-    background-color: blue;
+    background-color: #ddd39e;
+    border-radius: 10px;
 `;
